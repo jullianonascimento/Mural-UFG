@@ -63,6 +63,9 @@ public class Solicitacao {
     private String estado;
     private String descricaoEstado;
 
+    public Solicitacao() {
+    }
+
     public Solicitacao(Date dataAbertura, String estado, String descricaoEstado) {
         this.dataAbertura = dataAbertura;
         this.estado = estado;

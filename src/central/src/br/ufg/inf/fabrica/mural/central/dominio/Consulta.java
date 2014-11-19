@@ -52,15 +52,16 @@
 
 package br.ufg.inf.fabrica.mural.central.dominio;
 
+
 import java.util.Collection;
 import java.util.Date;
 
 /**
  * Representa uma Solicitação de busca na lista de informações publicadas.
  */
-public class Consulta {
+public class Consulta extends Solicitacao {
 
-    private Collection publicacoesVigentes;
+    private Collection<Publicacao> publicacoesVigentes;
     private String termo;
     private Date dataInicio;
     private Date dataFim;
@@ -71,13 +72,33 @@ public class Consulta {
         this.dataFim = dataFim;
     }
 
-    private boolean validarSolicitacao(String termo, Date periodo){
-
+    private boolean validarSolicitacao(String termo, Date dataInicio, Date dataFim){
+        if (termo != null){
+            if (dataFim.compareTo(dataInicio) >= 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
         return false;
     }
 
     public Collection executaConsulta(){
-
+        setDataAbertura(new Date());
+        if (validarSolicitacao(termo, dataInicio, dataFim)){
+            setEstado("Aceita");
+            PublicacaoDAOImpl publicacaoDAO = new PublicacaoDAOImpl();
+            publicacoesVigentes = publicacaoDAO.consultarPublicacoes(termo, dataInicio, dataFim);
+            if (publicacoesVigentes.isEmpty()){
+                setDescricaoEstado("Nenhum resultado encontrado!");
+            } else {
+                setDescricaoEstado("Solicitação tratada com sucesso");
+            }
+            return publicacoesVigentes;
+        } else {
+            setEstado("Negada");
+            setDescricaoEstado("Solicitação recusada por inconsistência de informação.");
+        }
         return null;
     }
 
