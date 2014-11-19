@@ -63,6 +63,10 @@ public class Publicacao {
 
     private long id;
 
+    public Publicacao(long id) {
+        this.id = id;
+    }
+
     public void colocarEmVigencia(Date dataCorrente, Collection listaPublicacao){
 
     }
@@ -73,5 +77,13 @@ public class Publicacao {
 
     public void registrarComFalha(Date dataCorrente, Collection listaPublicacao){
 
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

@@ -52,64 +52,44 @@
 
 package br.ufg.inf.fabrica.mural.central.dominio;
 
-import java.util.Collection;
 import java.util.Date;
 
 /**
- * Representa uma Solicitação de busca na lista de informações publicadas.
+ * Representa uma solicitação de serviço à Central UFG.
  */
-public class Consulta {
+public class Solicitacao {
 
-    private Collection publicacoesVigentes;
-    private String termo;
-    private Date dataInicio;
-    private Date dataFim;
+    private Date dataAbertura;
+    private String estado;
+    private String descricaoEstado;
 
-    public Consulta(String termo, Date dataInicio, Date dataFim) {
-        this.termo = termo;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
+    public Solicitacao(Date dataAbertura, String estado, String descricaoEstado) {
+        this.dataAbertura = dataAbertura;
+        this.estado = estado;
+        this.descricaoEstado = descricaoEstado;
     }
 
-    private boolean validarSolicitacao(String termo, Date periodo){
-
-        return false;
+    public Date getDataAbertura() {
+        return dataAbertura;
     }
 
-    public Collection executaConsulta(){
-
-        return null;
+    public void setDataAbertura(Date dataAbertura) {
+        this.dataAbertura = dataAbertura;
     }
 
-    public Collection getPublicacoesVigentes() {
-        return publicacoesVigentes;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setPublicacoesVigentes(Collection publicacoesVigentes) {
-        this.publicacoesVigentes = publicacoesVigentes;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public String getTermo() {
-        return termo;
+    public String getDescricaoEstado() {
+        return descricaoEstado;
     }
 
-    public void setTermo(String termo) {
-        this.termo = termo;
-    }
-
-    public Date getDataInicio() {
-        return dataInicio;
-    }
-
-    public void setDataInicio(Date dataInicio) {
-        this.dataInicio = dataInicio;
-    }
-
-    public Date getDataFim() {
-        return dataFim;
-    }
-
-    public void setDataFim(Date dataFim) {
-        this.dataFim = dataFim;
+    public void setDescricaoEstado(String descricaoEstado) {
+        this.descricaoEstado = descricaoEstado;
     }
 }
