@@ -53,6 +53,8 @@
 package br.ufg.inf.fabrica.mural.central.dominio;
 
 
+import br.ufg.inf.fabrica.mural.central.persistencia.PublicacaoDAOImpl;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -72,6 +74,14 @@ public class Consulta extends Solicitacao {
         this.dataFim = dataFim;
     }
 
+    /**
+     * Confere se o termo não é nulo e se a data de início da vigência
+     * não é posterior à data de fim.
+     * @param termo representa o termo a ser pesquisado na consulta
+     * @param dataInicio Data inicial da consulta a ser realizada
+     * @param dataFim Data final da consulta a ser realizada
+     * @return true se a solicitação é válida e false caso contrário
+     */
     private boolean validarSolicitacao(String termo, Date dataInicio, Date dataFim){
         if (termo != null){
             if (dataFim.compareTo(dataInicio) >= 0){
@@ -83,6 +93,11 @@ public class Consulta extends Solicitacao {
         return false;
     }
 
+    /**
+     * Realiza a consulta de publicações.
+     * @return Coleção que representa o conjunto de Publicacao obtida a partir da Consulta criada
+     * ou null caso não seja possível realizar a Consulta
+     */
     public Collection executaConsulta(){
         setDataAbertura(new Date());
         if (validarSolicitacao(termo, dataInicio, dataFim)){
