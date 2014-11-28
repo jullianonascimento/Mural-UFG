@@ -5,7 +5,7 @@
      <class>br.ufg.inf.fabrica.mural.central.dominio.Usuario</class>
      <class>br.ufg.inf.fabrica.mural.central.dominio.Bloqueio</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:derby:C:\derby\sample"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
       <property name="javax.persistence.jdbc.password" value="app"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
       <property name="javax.persistence.jdbc.user" value="app"/>
