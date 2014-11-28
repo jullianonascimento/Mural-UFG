@@ -121,8 +121,4 @@ public class UsuarioDAO {
         }
         return true;
     }
-
-    public Collection obterUsuarioGrupo(GrupoDestinatario grupoDestinatario) {
-        return null;
-    }
 }

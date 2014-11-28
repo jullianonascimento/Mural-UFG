@@ -143,18 +143,6 @@ public class Usuario implements Serializable {
         if (this.id != other.id) {
             return false;
         }
-        if (!Objects.equals(this.login, other.login)) {
-            return false;
-        }
-        if (!Objects.equals(this.senha, other.senha)) {
-            return false;
-        }
-        if (this.apenasProdutor != other.apenasProdutor) {
-            return false;
-        }
-        if (this.administrador != other.administrador) {
-            return false;
-        }
         return true;
     }
 }

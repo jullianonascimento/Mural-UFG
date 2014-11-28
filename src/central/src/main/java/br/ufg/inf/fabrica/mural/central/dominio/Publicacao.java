@@ -67,18 +67,6 @@ public class Publicacao {
         this.id = id;
     }
 
-    public void colocarEmVigencia(Date dataCorrente, Collection listaPublicacao){
-
-    }
-
-    public void suspender(Date dataCorrente, Collection listaPublicacao){
-
-    }
-
-    public void registrarComFalha(Date dataCorrente, Collection listaPublicacao){
-
-    }
-
     public long getId() {
         return id;
     }

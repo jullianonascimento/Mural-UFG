@@ -63,7 +63,7 @@ import java.util.Date;
  */
 public class Consulta extends Solicitacao {
 
-    private Collection<Publicacao> publicacoesVigentes;
+    private Collection<Publicacao> publicacoesVigentes = null;
     private String termo;
     private Date dataInicio;
     private Date dataFim;
@@ -84,11 +84,7 @@ public class Consulta extends Solicitacao {
      */
     private boolean validarSolicitacao(String termo, Date dataInicio, Date dataFim){
         if (termo != null){
-            if (dataFim.compareTo(dataInicio) >= 0){
-                return true;
-            } else {
-                return false;
-            }
+            return dataFim.compareTo(dataInicio) >= 0;
         }
         return false;
     }
@@ -114,7 +110,7 @@ public class Consulta extends Solicitacao {
             setEstado("Negada");
             setDescricaoEstado("Solicitação recusada por inconsistência de informação.");
         }
-        return null;
+        return publicacoesVigentes;
     }
 
     public Collection getPublicacoesVigentes() {

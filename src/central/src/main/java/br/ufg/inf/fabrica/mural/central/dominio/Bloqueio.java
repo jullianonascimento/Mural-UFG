@@ -72,6 +72,14 @@ public class Bloqueio implements Serializable {
     public Bloqueio() {
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public Date getDataBloqueio() {
         return dataBloqueio;
     }
@@ -114,13 +122,7 @@ public class Bloqueio implements Serializable {
             return false;
         }
         final Bloqueio other = (Bloqueio) obj;
-        if (!Objects.equals(this.dataBloqueio, other.dataBloqueio)) {
-            return false;
-        }
-        if (!Objects.equals(this.dataDesbloqueio, other.dataDesbloqueio)) {
-            return false;
-        }
-        if (!Objects.equals(this.motivo, other.motivo)) {
+        if (this.id != other.id) {
             return false;
         }
         return true;

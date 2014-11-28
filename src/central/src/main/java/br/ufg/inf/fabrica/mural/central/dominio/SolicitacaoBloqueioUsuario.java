@@ -53,24 +53,24 @@
 package br.ufg.inf.fabrica.mural.central.dominio;
 
 public class SolicitacaoBloqueioUsuario {
-    
-    public SolicitacaoBloqueioUsuario SolicitacaoBloqueioUsuario(Usuario usuario, String operacao) {
-        return null;
+
+    private Usuario usuario;
+    private String operacao;
+
+    public SolicitacaoBloqueioUsuario(Usuario usuario, String operacao) {
+        this.usuario = usuario;
+        this.operacao = operacao;
     }
-    
     public String executacaoOperacao(){
         return null;
     }
     
-    public boolean validaOperacao(String operacao){
+    public boolean validaOperacao(){
         return true;
     }
     
     public boolean validaMotivo() {
         return true;
     }
-    
-    public void registraMotivo(String motivo) {
-    }
-    
+
 }

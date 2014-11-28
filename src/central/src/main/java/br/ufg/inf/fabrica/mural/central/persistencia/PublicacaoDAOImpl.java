@@ -53,21 +53,22 @@
 package br.ufg.inf.fabrica.mural.central.persistencia;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 
 public class PublicacaoDAOImpl implements PublicacaoDAO{
     @Override
     public Collection consultarPublicacoes(String termo, Date dataInicio, Date dataFim) {
-        return  null;
+        return  Collections.emptyList();
     }
 
     @Override
     public Collection obterPublicacoes(String estado) {
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
     public void mudaEstadoPublicacao(String estado, Collection listaPublicacao) {
-
+        // Do nothing because this model is a stub.
     }
 }
