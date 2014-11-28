@@ -68,12 +68,8 @@ public class UsuarioDAO {
     private EntityManager getEntityManager() {
         EntityManagerFactory factory = null;
         EntityManager entityManager = null;
-        try {
-            factory = Persistence.createEntityManagerFactory("br.ufg.inf.fabrica.muralufg_central_jar_1.0-SNAPSHOTPU");
-            entityManager = factory.createEntityManager();
-        } finally {
-            // factory.close();
-        }
+        factory = Persistence.createEntityManagerFactory("br.ufg.inf.fabrica.muralufg_central_jar_1.0-SNAPSHOTPU");
+        entityManager = factory.createEntityManager();
         return entityManager;
     }
 
