@@ -1,0 +1,13 @@
+br\ufg\inf\fabrica\mural\central\dominio\Usuario_.class
+br\ufg\inf\fabrica\mural\central\dominio\Bloqueio.class
+br\ufg\inf\fabrica\mural\central\dominio\GrupoDestinatario.class
+br\ufg\inf\fabrica\mural\central\persistencia\UsuarioDAO.class
+br\ufg\inf\fabrica\mural\central\dominio\SolicitacaoBloqueioUsuario.class
+br\ufg\inf\fabrica\mural\central\persistencia\PublicacaoDAOImpl.class
+br\ufg\inf\fabrica\mural\central\dominio\Usuario.class
+br\ufg\inf\fabrica\mural\central\dominio\GrupoDestinatario_.class
+br\ufg\inf\fabrica\mural\central\dominio\Consulta.class
+br\ufg\inf\fabrica\mural\central\persistencia\PublicacaoDAO.class
+br\ufg\inf\fabrica\mural\central\dominio\Publicacao.class
+br\ufg\inf\fabrica\mural\central\dominio\Bloqueio_.class
+br\ufg\inf\fabrica\mural\central\dominio\Solicitacao.class
